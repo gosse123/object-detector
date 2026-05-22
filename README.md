@@ -6,10 +6,11 @@ Un projet de **Vision par Ordinateur** utilisant **OpenCV** et **MediaPipe** pou
 
 ## ✨ Fonctionnalités
 
-- **Détection de main** avec affichage des landmarks (21 points)
-- **Détection de visage** avec dessin du contour
+- Détection de main avec affichage des 21 landmarks
+- Détection de visage avec dessin du contour
+- Deux scripts indépendants
+- Launcher (`main.py`) pour choisir facilement le mode
 - Interface simple et fluide
-- Deux scripts indépendants + un launcher optionnel
 
 ---
 
@@ -23,74 +24,142 @@ Un projet de **Vision par Ordinateur** utilisant **OpenCV** et **MediaPipe** pou
 ---
 
 ## 📁 Structure du Projet
+
+```bash
 hand-face-detection/
 ├── src/
 │   ├── hand_detection.py
 │   └── face_detection.py
-├── models/
+├── models/                  # Modèles MediaPipe (optionnel)
 ├── requirements.txt
 ├── README.md
-├── main.py
-└── .gitignore
+├── LICENSE
+├── .gitignore
+└── main.py
+```
 
 ---
 
-## Installation
+## 🚀 Installation
 
 1. Clone le repository :
 ```bash
 git clone https://github.com/tonusername/hand-face-detection.git
 cd hand-face-detection
+```
 
-2. Crée un environnement virtuel (recommandé) :
+2. Crée un environnement virtuel (fortement recommandé) :
+```bash
 python -m venv venv
-source venv/bin/activate    # Windows : venv\Scripts\activate
+
+# Sur Windows :
+venv\Scripts\activate
+
+# Sur Linux / Mac :
+source venv/bin/activate
+```
 
 3. Installe les dépendances :
+```bash
 pip install -r requirements.txt
+```
 
-4. (Optionnel) Télécharge le modèle MediaPipe Tasks et place-le dans le dossier models/
+4. (Optionnel) Télécharge le modèle `hand_landmarker.task` et place-le dans le dossier `models/`
 
-## Utilisation
-Lancer directement un script :
+---
+
+## 🎮 Utilisation
+
+### Avec le launcher (recommandé) :
+```bash
+python main.py
+```
+
+### Lancer directement un script :
+```bash
 # Détection de main
 python src/hand_detection.py
 
-## Détection de visage
+# Détection de visage
 python src/face_detection.py
+```
 
-Ou utiliser le launcher (recommandé) :
-python main.py
-Appuie sur q pour quitter.
+**Appuie sur `q`** pour quitter n'importe quelle fenêtre.
 
-## Améliorations futures possibles
+---
 
-Détection simultanée main + visage
-Reconnaissance des gestes (index levé, poing, etc.)
-Interface graphique avec Tkinter ou Streamlit
-Enregistrement vidéo
-Support multi-mains
+## 📋 requirements.txt
 
-## Auteur
-Nahounou gosse 
-Projet réalisé dans le cadre d'apprentissage en Vision par Ordinateur.
-
-##📄 License
-Ce projet est sous licence MIT - voir le fichier LICENSE pour plus de détails.
-
-
-### 3. Contenu des autres fichiers importants
-
-#### `requirements.txt`
-
+```txt
 opencv-python>=4.8.0
 mediapipe>=0.10.14
 numpy
+```
 
-.gitignore
+---
 
-gitignore__pycache__/
+## 📌 Améliorations futures possibles
+
+- Détection simultanée (main + visage)
+- Reconnaissance des gestes de la main
+- Interface graphique (Tkinter / Streamlit)
+- Enregistrement de la vidéo
+- Support multi-mains
+
+---
+
+## 👨‍💻 Auteur
+
+**Nahounou Gosse**
+
+Projet réalisé dans le cadre d'apprentissage en **Vision par Ordinateur**.
+
+---
+
+## 📄 License
+
+Ce projet est sous licence **MIT** — voir le fichier [`LICENSE`](LICENSE) pour plus de détails.
+```
+
+---
+
+### Fichiers complémentaires (à jour) :
+
+#### `requirements.txt`
+```txt
+opencv-python>=4.8.0
+mediapipe>=0.10.14
+numpy
+```
+
+#### `.gitignore`
+```gitignore
+# Environnements virtuels
 venv/
+env/
+.venv/
+
+# Cache Python
+__pycache__/
 *.pyc
-.DS_Store
+*.pyo
+
+# Modèles MediaPipe
+*.task
 models/*.task
+
+# Fichiers temporaires
+*.mp4
+*.avi
+output/
+
+# Système
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+```
+
+---
