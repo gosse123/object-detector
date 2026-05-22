@@ -35,7 +35,7 @@ hand-face-detection/
 
 ---
 
-## 🚀 Installation
+## Installation
 
 1. Clone le repository :
 ```bash
@@ -51,19 +51,19 @@ pip install -r requirements.txt
 
 4. (Optionnel) Télécharge le modèle MediaPipe Tasks et place-le dans le dossier models/
 
-🎮 Utilisation
+## Utilisation
 Lancer directement un script :
 # Détection de main
 python src/hand_detection.py
 
-# Détection de visage
+## Détection de visage
 python src/face_detection.py
 
 Ou utiliser le launcher (recommandé) :
 python main.py
 Appuie sur q pour quitter.
 
-📌 Améliorations futures possibles
+## Améliorations futures possibles
 
 Détection simultanée main + visage
 Reconnaissance des gestes (index levé, poing, etc.)
@@ -71,11 +71,11 @@ Interface graphique avec Tkinter ou Streamlit
 Enregistrement vidéo
 Support multi-mains
 
-👨‍💻 Auteur
+## Auteur
 Nahounou gosse 
 Projet réalisé dans le cadre d'apprentissage en Vision par Ordinateur.
 
-📄 License
+##📄 License
 Ce projet est sous licence MIT - voir le fichier LICENSE pour plus de détails.
 
 
