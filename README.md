@@ -110,7 +110,7 @@ numpy
 
 ## 👨‍💻 Auteur
 
-**Nahounou Gosse**
+**Groupe 14**
 
 Projet réalisé dans le cadre d'apprentissage en **Vision par Ordinateur**.
 
